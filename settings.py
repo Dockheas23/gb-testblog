@@ -1,6 +1,7 @@
 # Django settings for gb_testblog project.
+import os
 
-DEBUG = True
+DEBUG = os.getenv('SERVER_SOFTWARE', '').startswith('Development')
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
