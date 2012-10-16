@@ -2,6 +2,7 @@ body {
     margin: 0;
     background: lightblue;
     background-image: url('background.jpg');
+    background-attachment: fixed;
     font-family: sans-serif;
 }
 
