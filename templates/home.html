@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="blog-post-list">
+    {% for post in posts %}
+    <div class="blog-post">
+        <h2><a href="/view/{{post.key.id}}">{{post.title}}</a></h2>
+        <div class="post-details">
+            {{post.created|timesince}} ago, by {{post.author}}
+        </div>
+        {{post.body|linebreaks}}
+        {% ifnotequal post.modified.ctime post.created.ctime %}
+        <div class="modified">
+            Last modified: {{post.modified|timesince}} ago
+        </div>
+        {% endifnotequal %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<div id="comment-{{comment.key.id}}" class="comment">
+    {% if is_admin or current_user and current_user == comment.author %}
+    <ul>
+        <a class="delete-comment-link"
+            href="/delete-comment/{{post.key.id}}/{{comment.key.id}}"><li>Delete comment</li></a>
+    </ul>
+    {% endif %}
+    <h4>{{comment.title}}</h4>
+    <div class="comment-details">
+        {{comment.created|timesince}} ago, by
+        {% if comment.author %}{{comment.author}}
+        {% else %}Anonymous
+        {% endif%}
+    </div>
+    {{comment.body|linebreaks}}
+</div>

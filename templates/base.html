@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Super-Blog!</title>
+        <link rel="stylesheet" type="text/css" href="/static/style/style.css"/>
+    </head>
+
+    <body>
+        <div id="authbar">
+            {% block authbar %}{{auth_string|safe}}{% endblock %}
+        </div>
+        <div id="contentwrap">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/all"><li>All Posts</li></a>
+                <a href="/add"><li>New Post</li></a>
+            </ul>
+            <h1>Super-Blog!</h1>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

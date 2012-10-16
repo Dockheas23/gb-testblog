@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    background: lightblue;
+    background-image: url('background.jpg');
+    font-family: sans-serif;
+}
+
+/* #authbar - The bar at the top of the page */
+#authbar {
+    background: grey;
+    text-align: right;
+    padding: 0.5ex 1em;
+    margin: 0;
+    color: white;
+    font-size: 12px;
+}
+
+#authbar a { color: white; }
+#authbar a:hover { color: orange; }
+
+/* #contentwrap - The main page content area */
+#contentwrap {
+    background: #EEE;
+    max-width: 40em;
+    margin: 2em auto;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+}
+
+#contentwrap > img { width: 100%; }
+#contentwrap > ul li { margin-top: 1ex; }
+
+/* Some overall defaults */
+h1, h3 { color: #444; }
+h2, h4 { color: brown; }
+
+a { color: orange; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+label {
+    display: inline-block;
+    min-width: 5em;
+}
+
+input {
+    width: 60%;
+}
+
+textarea {
+    height: 40em;
+    width: 80%;
+    vertical-align: top;
+}
+
+#comment-form textarea {
+    height: 10em; /* Smaller textarea for submitting comments */
+}
+
+/* Menu links, including the Edit and Delete buttons */
+ul { float: right; }
+
+ul li {
+    display: inline-block;
+    border: thin solid grey;
+    padding: 0.2em 0.5em;
+    min-width: 5em;
+    text-align: center;
+}
+
+ul a li {
+    color: grey;
+    text-decoration: none;
+}
+
+ul a li:hover {
+    background: white;
+    color: orange;
+    border-color: orange;
+}
+
+/* .errorlist - displayed when a form fails to validate */
+ul.errorlist {
+    float: none;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+}
+
+ul.errorlist li {
+    display: inline-block;
+    width: 100%;
+    font-size: small;
+    text-align: right;
+    padding: 0;
+    background: orange;
+    color: white;
+    border: none;
+}
+
+/* Bordering, Spacing and Layouts for major site objects */
+.post-form {
+    border-top: thick groove white;
+}
+
+.blog-post-list {
+    padding-bottom: 0.5em;
+}
+
+.blog-post {
+    clear: right;
+    padding-bottom: 1em;
+    border-top: thick groove white;
+}
+
+.blog-post h3 {
+    padding-top: 1em;
+    border-top: thick groove white;
+}
+
+#comments > p {
+    padding-top: 1em;
+    border-top: thin dashed;
+}
+
+.comment {
+    clear: right;
+    border-top: thin dashed;
+}
+
+.post-details,
+.comment-details {
+    clear: right;
+    font-size: smaller;
+    text-align: right;
+    border: 1pt dotted grey;
+    padding-right: 1ex;
+}
+
+.blog-post-archive {
+    border-top: thick groove white;
+    padding-bottom: 0.5em;
+}
+
+.blog-post-archive span,
+.modified {
+    font-size: smaller;
+    font-style: oblique;
+}
