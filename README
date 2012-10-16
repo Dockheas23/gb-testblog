@@ -1,0 +1,22 @@
+This is a Django project to be deployed on Google App Engine, and using the High
+Replication Datastore. The deployment can be found at
+http://gb-testblog.appspot.com/.
+
+The integration of Django with App Engine is done by ignoring the regular Django
+models and dealing directly with the Datastore using the Google API. Because of
+this, some of the conveniences of Django could not be used, most notably the
+admin interface and generic views. Instead most of the functionality is written
+directly into the views. Authentication is handled with the App Engine Users
+API.
+
+The basic workings of the blog are as follows:
+- The blog contains posts and comments, each of which has a title and a body
+- Any logged in user can create a post
+- Only that user, or an administrator, can edit or delete that post
+- Anyone can comment on a post, even anonymous users
+- An administrator can delete any comment
+- A logged in user can delete their own comments
+- An anonymous user cannot delete any comments
+
+A small bit of unobtrusive AJAX is used for adding and deleting comments (with
+JQuery).
